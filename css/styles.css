@@ -393,10 +393,36 @@ ul {
 	color: var(--text-white-color);
 	background-color: var(--accent-color);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project {
 	display: flex;
 	flex-wrap: wrap;
+}
+.project-thumb {
+	position: relative;
+	overflow: hidden;
+	
+}
+.overlay-text {
+	position: absolute;
+	display: flex;
+	background-color: rgba(33, 150, 243, 0.9);
+	width: 100%;
+	height: 100%;
+	padding: 63px 24px;
+	font-size: 18px;
+	line-height: 1.5;
+	color: var(--text-white-color);
+	top: 0;
+	left: 0;
+	transform: translateY(100%);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.project-link:hover .overlay-text,
+.project-link:focus .overlay-text {
+	transform: translateY(0);
 }
 
 .project-subject {
@@ -430,6 +456,7 @@ ul {
 .project a:hover,
 .project a:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project > li > a {
 	text-decoration: none;
