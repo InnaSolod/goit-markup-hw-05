@@ -558,7 +558,7 @@ address {
 	fill: var(--text-white-color);
 	background-color: rgba(255, 255, 255, 0.1);
 	border-radius: 50% 50%;
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon:hover,
 .social-icon:focus {
@@ -572,7 +572,7 @@ address {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.2);
-	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	
 }
 .modal {
@@ -589,6 +589,7 @@ address {
 .is-hidden {
 	opacity: 0;
 	pointer-events: none;
+	visibility: hidden;
 	
 }
 .backdrop .is-hidden {
